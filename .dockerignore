@@ -1,7 +1,8 @@
 node_modules
-# dist
 __tests__
 Docker
 package-lock.json
 README.md
 jest.config.js
+.dockerignore
+env-example.txt
