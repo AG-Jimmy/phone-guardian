@@ -1,8 +1,0 @@
-FROM node:20-alpine
-WORKDIR /app
-COPY package.json .
-RUN npm install --only=production
-COPY . .
-EXPOSE 3000
-CMD ["npm","start"]
-# CMD ["sh", "-c", "if [ \"$NODE_MODE\" = 'development' ]; then npm run dev; else npm run start; fi"]

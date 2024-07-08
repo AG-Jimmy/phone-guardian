@@ -1,6 +1,6 @@
 import request from "supertest";
-import server from "../server"; // Importing the server instance
-import HttpStatus from "../Enums/httpStatus";
+import server from "../src/server"; // Importing the server instance
+import HttpStatus from "../src/Enums/httpStatus";
 
 describe("Test Doc Page root", () => {
   test("It should respond to the GET method", async () => {

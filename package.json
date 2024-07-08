@@ -5,13 +5,13 @@
   "main": "server.js",
   "scripts": {
     "start": "npm run build && node dist/server.js",
-    "dev": "nodemon --exec ts-node server.ts",
+    "dev": "nodemon --exec ts-node src/server.ts",
     "build": "tsc",
     "test": "jest --detectOpenHandles",
-    "docker-dev:up": "docker-compose -f docker-compose.dev.yml up",
-    "docker-dev:down": "docker-compose -f docker-compose.dev.yml down",
-    "docker-prod:up": "docker-compose -f docker-compose.prod.yml up",
-    "docker-prod:down": "docker-compose -f docker-compose.prod.yml down"
+    "docker-dev:up": "docker-compose -f Docker/docker-compose.dev.yml up -d",
+    "docker-prod:up": "docker-compose -f Docker/docker-compose.prod.yml up -d",
+    "docker-dev:down": "docker-compose -f Docker/docker-compose.dev.yml down",
+    "docker-prod:down": "docker-compose -f Docker/docker-compose.prod.yml down"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +29,7 @@
     "@types/supertest": "^6.0.2",
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
+    "prisma": "^5.13.0",
     "supertest": "^7.0.0",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",

@@ -10,7 +10,7 @@ const PORT = process.env.PORT ?? 3000; // default port to 3000
 app.use(cors(corsOptions)); // allowed origin and destination
 app.use(cookieParser()); // Use cookie-parser middleware
 app.use(express.json()); // Use Json middleware
-app.use("/", express.static(path.join(__dirname, "public"))); //assets directory
+app.use("/", express.static(path.join(__dirname, "../public"))); //assets directory
 app.use(routes); //routes combine directory
 
 const server = app.listen(PORT, () => {
@@ -18,4 +18,3 @@ const server = app.listen(PORT, () => {
 });
 
 export default server;
-/* import { Request, Response } from "express-serve-static-core" */
