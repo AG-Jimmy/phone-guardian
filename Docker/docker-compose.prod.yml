@@ -4,7 +4,3 @@ services:
   app-prod:
     build:
       target: prod
-      context: ../ # Assuming Docker/ is a subdirectory of the project root
-      dockerfile: Docker/Dockerfile # Specify the path to the Dockerfile
-    env_file:
-      - ../.env
